@@ -116,7 +116,7 @@ function makePlot(obj, props) {
 		plotData.var_x = var_x;
 		plotData.var_y = var_y;
 
-		var req = ocpu.rpc("kmeansCluster", {data: data, var_x: var_x, var_y: var_y, kvalue: kvalue}, function(output){
+		var req =ocpu.rpc("kmeansCluster", {data: data, var_x: var_x, var_y: var_y, kvalue: kvalue}, function(output){
 				var kmeansData = output.message;
 				plotData.kmeansData = kmeansData;
 				addNewPlot('K-Means Clustering', plotData);
